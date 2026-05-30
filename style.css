@@ -30,12 +30,6 @@ body {
   color: #8b0038;
 }
 
-video {
-  max-width: 100%;
-  max-height: 100vh;
-  border-radius: 18px;
-}
-
 h1 {
   font-size: 42px;
   margin: 10px 0;
@@ -55,6 +49,84 @@ button {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(255, 47, 134, 0.7);
+}
+
+.video-sahne {
+  min-height: 100vh;
+  background: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-sahne video,
+#patlamaVideo {
+  max-width: 100%;
+  max-height: 100vh;
+  border-radius: 18px;
+}
+
+.video-ustu-soru {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: rgba(0,0,0,.72);
+  padding: 25px;
+  border-radius: 28px;
+  color: white;
+  text-align: center;
+  width: min(560px, 92%);
+  box-shadow: 0 0 35px rgba(255,47,134,.45);
+}
+
+.video-ustu-soru h1 {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.kaciyor-ekrani {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+  padding: 25px;
+}
+
+.kaciyor-ekrani h1 {
+  color: #ff2f86;
+  text-shadow: 0 0 20px rgba(255,47,134,.8);
+}
+
+.kaciyor-kutu {
+  position: relative;
+  display: inline-block;
+  max-width: 95%;
+}
+
+.kaciyor-gorsel {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 14px 40px rgba(255,47,134,.35);
+  display: block;
+}
+
+.yakalabtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ff003c;
+  box-shadow: 0 0 35px rgba(255,0,60,.95);
+  z-index: 3;
 }
 
 .ana-gorsel {
@@ -86,7 +158,30 @@ button {
 
 .dogum-gunu {
   min-height: 100vh;
+  position: relative;
   background: linear-gradient(90deg, #f6b8c8 0%, #f6b8c8 24%, white 24%, white 76%, #f6b8c8 76%, #f6b8c8 100%);
+  overflow: hidden;
+}
+
+#emojiAlani {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.emoji {
+  position: fixed;
+  top: -40px;
+  animation: emojiDus 5s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes emojiDus {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 .beyaz-serit {
@@ -96,6 +191,8 @@ button {
   min-height: 100vh;
   padding: 35px 20px 80px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .beyaz-serit h1 {
@@ -171,6 +268,15 @@ button {
 
 @media (max-width: 700px) {
   h1 { font-size: 30px; }
+
+  .video-ustu-soru {
+    bottom: 20px;
+    padding: 18px;
+  }
+
+  .video-ustu-soru h1 {
+    font-size: 23px;
+  }
 
   .busted-yazi { font-size: 55px; }
 
