@@ -13,15 +13,15 @@
   <button onclick="goreviBaslat()">GÖREVİ BAŞLAT</button>
 </section>
 
-<section id="videoEkrani" class="ekran siyah gizli">
+<section id="videoEkrani" class="video-sahne gizli">
   <video id="yurumeVideo" playsinline>
     <source src="CakmaSakaryaliyidurdur.mp4" type="video/mp4">
   </video>
-</section>
 
-<section id="durdurEkrani" class="ekran siyah gizli">
-  <h1>Sakaryalıyı durduracak mısın?</h1>
-  <button onclick="patlat()">DURDUR</button>
+  <div id="videoUstuSoru" class="video-ustu-soru gizli">
+    <h1>Sakaryalıyı durduracak mısın?</h1>
+    <button onclick="patlat()">DURDUR</button>
+  </div>
 </section>
 
 <section id="patlamaEkrani" class="ekran siyah gizli">
@@ -30,10 +30,13 @@
   </video>
 </section>
 
-<section id="kaciyorEkrani" class="ekran pembe gizli">
+<section id="kaciyorEkrani" class="kaciyor-ekrani gizli">
   <h1>Sakaryalı Kaçıyor Yakalaaa!!!</h1>
-  <img src="Sakaryalikaciyor.jpeg" class="ana-gorsel">
-  <button onclick="yakala()">Yakala!!!</button>
+
+  <div class="kaciyor-kutu">
+    <img src="Sakaryalikaciyor.jpeg" class="kaciyor-gorsel">
+    <button class="yakalabtn" onclick="yakala()">Yakala!!!</button>
+  </div>
 </section>
 
 <section id="bustedEkrani" class="ekran siyah gizli">
@@ -48,6 +51,8 @@
 </section>
 
 <section id="dogumGunu" class="dogum-gunu gizli">
+  <div id="emojiAlani"></div>
+
   <div class="beyaz-serit">
     <h1>İyi Ki Doğdun Zeynep 💖</h1>
 
