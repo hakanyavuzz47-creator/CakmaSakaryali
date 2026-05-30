@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Çakma Sakaryalı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="baslangic" class="ekran siyah">
+  <video id="yurumeVideo" autoplay playsinline>
+    <source src="CakmaSakaryaliyidurdur.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section id="durdurEkrani" class="ekran siyah gizli">
+  <h1>Sakaryalıyı durduracak mısın?</h1>
+  <button onclick="patlat()">DURDUR</button>
+</section>
+
+<section id="patlamaEkrani" class="ekran siyah gizli">
+  <video id="patlamaVideo" playsinline>
+    <source src="Patlamaefekti.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section id="kaciyorEkrani" class="ekran pembe gizli">
+  <h1>Sakaryalı Kaçıyor Yakalaaa!!!</h1>
+  <img src="Sakaryalikaciyor.jpeg" class="ana-gorsel">
+  <button onclick="yakala()">Yakala!!!</button>
+</section>
+
+<section id="bustedEkrani" class="ekran siyah gizli">
+  <h1 class="busted-yazi">BUSTED</h1>
+  <img src="busted.jpeg" class="busted-img">
+</section>
+
+<section id="tebrikEkrani" class="ekran pembe gizli">
+  <h1>Tebrikler Sakaryalıyı Yakaladın</h1>
+  <img src="Periler.jpeg" class="ana-gorsel">
+  <button id="devamBtn" class="gizli" onclick="dogumGunuAc()">Devam Et</button>
+</section>
+
+<section id="dogumGunu" class="dogum-gunu gizli">
+  <div class="beyaz-serit">
+    <h1>İyi Ki Doğdun Zeynep 💖</h1>
+
+    <div class="foto-akis">
+      <img src="pankart.png">
+      <img src="1.jpg">
+      <img src="2.jpeg">
+      <img src="3.jpeg">
+      <img src="4.jpeg">
+      <img src="5.jpeg">
+      <img src="6.jpeg">
+    </div>
+
+    <button class="zarf-btn" onclick="zarfiAc()">💌 Zarfı Aç</button>
+  </div>
+</section>
+
+<div id="mektupPopup" class="mektup-popup gizli">
+  <div class="mektup">
+    <button class="kapat" onclick="mektubuKapat()">×</button>
+    <h2>Sevgili Zeynep,</h2>
+    <p>
+      Doğum günün kutlu olsun. 24 yaşına adım attığın bu güzel yaşında
+      sana huzur, mutluluk, sağlık ve kalbinden geçen ne varsa onu diliyoruz.
+    </p>
+    <p>
+      İyi ki hayatımızdasın, iyi ki varsın. Gülüşünle, enerjinle ve varlığınla
+      etrafındaki herkese güzellik katıyorsun.
+    </p>
+    <p>
+      Yeni yaşın sana bol kahkaha, güzel anılar, başarı ve unutulmaz anlar getirsin.
+      Seni çok seviyoruz.
+    </p>
+    <h3>Nice mutlu yaşlara Zeynep 💖</h3>
+  </div>
+</div>
+
+<audio id="bustedSes">
+  <source src="busted.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="muzik" loop>
+  <source src="muzik.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
