@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -8,9 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-.gizli {
-  display: none !important;
-}
+.gizli { display: none !important; }
 
 .ekran {
   min-height: 100vh;
@@ -45,6 +41,10 @@ h1 {
   margin: 10px 0;
 }
 
+p {
+  font-size: 22px;
+}
+
 button {
   padding: 18px 38px;
   border: none;
@@ -69,7 +69,6 @@ button {
   font-size: 90px;
   letter-spacing: 8px;
   text-shadow: 0 0 25px red;
-  z-index: 2;
 }
 
 .busted-img {
@@ -87,15 +86,7 @@ button {
 
 .dogum-gunu {
   min-height: 100vh;
-  background: linear-gradient(
-    90deg,
-    #f6b8c8 0%,
-    #f6b8c8 24%,
-    white 24%,
-    white 76%,
-    #f6b8c8 76%,
-    #f6b8c8 100%
-  );
+  background: linear-gradient(90deg, #f6b8c8 0%, #f6b8c8 24%, white 24%, white 76%, #f6b8c8 76%, #f6b8c8 100%);
 }
 
 .beyaz-serit {
@@ -151,7 +142,6 @@ button {
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
   color: #5c2a3d;
   position: relative;
-  animation: popup .7s forwards;
 }
 
 .mektup h2 {
@@ -179,36 +169,13 @@ button {
   font-size: 25px;
 }
 
-@keyframes popup {
-  from {
-    opacity: 0;
-    transform: scale(.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @media (max-width: 700px) {
-  h1 {
-    font-size: 30px;
-  }
+  h1 { font-size: 30px; }
 
-  .busted-yazi {
-    font-size: 55px;
-  }
+  .busted-yazi { font-size: 55px; }
 
   .dogum-gunu {
-    background: linear-gradient(
-      90deg,
-      #f6b8c8 0%,
-      #f6b8c8 8%,
-      white 8%,
-      white 92%,
-      #f6b8c8 92%,
-      #f6b8c8 100%
-    );
+    background: linear-gradient(90deg, #f6b8c8 0%, #f6b8c8 8%, white 8%, white 92%, #f6b8c8 92%, #f6b8c8 100%);
   }
 
   .beyaz-serit h1 {
