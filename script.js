@@ -1,8 +1,14 @@
 const yurumeVideo = document.getElementById("yurumeVideo");
 const patlamaVideo = document.getElementById("patlamaVideo");
 
+function goreviBaslat() {
+  ekranGec("baslangic", "videoEkrani");
+  yurumeVideo.muted = false;
+  yurumeVideo.play();
+}
+
 yurumeVideo.onended = function () {
-  ekranGec("baslangic", "durdurEkrani");
+  ekranGec("videoEkrani", "durdurEkrani");
 };
 
 function patlat() {
