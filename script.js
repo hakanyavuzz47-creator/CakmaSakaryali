@@ -2,93 +2,193 @@ const yurumeVideo = document.getElementById("yurumeVideo");
 const patlamaVideo = document.getElementById("patlamaVideo");
 
 function goreviBaslat() {
+
   ekranGec("baslangic", "videoEkrani");
+
+  yurumeVideo.currentTime = 0;
   yurumeVideo.muted = false;
   yurumeVideo.play();
 }
 
+/* YÜRÜME VİDEOSU BİTİNCE
+   EKRAN DEĞİŞMİYOR
+   VİDEO SON KARESİNDE DURUYOR
+   SORU ÇIKIYOR */
+
 yurumeVideo.onended = function () {
+
   yurumeVideo.pause();
-  document.getElementById("videoUstuSoru").classList.remove("gizli");
+
+  document
+    .getElementById("videoUstuSoru")
+    .classList
+    .remove("gizli");
 };
 
 function patlat() {
-  document.getElementById("videoUstuSoru").classList.add("gizli");
+
+  document
+    .getElementById("videoUstuSoru")
+    .classList
+    .add("gizli");
+
   ekranGec("videoEkrani", "patlamaEkrani");
 
   patlamaVideo.currentTime = 0;
   patlamaVideo.play();
 
   patlamaVideo.onended = function () {
-    ekranGec("patlamaEkrani", "kaciyorEkrani");
+
+    ekranGec(
+      "patlamaEkrani",
+      "kaciyorEkrani"
+    );
   };
 }
 
 function yakala() {
-  ekranGec("kaciyorEkrani", "bustedEkrani");
 
-  const bustedSes = document.getElementById("bustedSes");
+  ekranGec(
+    "kaciyorEkrani",
+    "bustedEkrani"
+  );
+
+  const bustedSes =
+    document.getElementById("bustedSes");
+
   bustedSes.currentTime = 0;
   bustedSes.play();
 
   setTimeout(() => {
-    ekranGec("bustedEkrani", "tebrikEkrani");
+
+    ekranGec(
+      "bustedEkrani",
+      "tebrikEkrani"
+    );
 
     setTimeout(() => {
-      document.getElementById("devamBtn").classList.remove("gizli");
+
+      document
+        .getElementById("devamBtn")
+        .classList
+        .remove("gizli");
+
     }, 2000);
 
   }, 7000);
 }
 
 function dogumGunuAc() {
-  ekranGec("tebrikEkrani", "dogumGunu");
 
-  const muzik = document.getElementById("muzik");
+  ekranGec(
+    "tebrikEkrani",
+    "dogumGunu"
+  );
+
+  const muzik =
+    document.getElementById("muzik");
+
   muzik.currentTime = 0;
   muzik.play();
 
-  setInterval(emojiYagdir, 500);
+  setInterval(
+    emojiYagdir,
+    500
+  );
 }
 
 function zarfiAc() {
-  document.getElementById("mektupPopup").classList.remove("gizli");
+
+  document
+    .getElementById("mektupPopup")
+    .classList
+    .remove("gizli");
 }
 
 function mektubuKapat() {
-  document.getElementById("mektupPopup").classList.add("gizli");
+
+  document
+    .getElementById("mektupPopup")
+    .classList
+    .add("gizli");
 }
 
 function ekranGec(eski, yeni) {
-  document.getElementById(eski).classList.add("gizli");
-  document.getElementById(yeni).classList.remove("gizli");
+
+  document
+    .getElementById(eski)
+    .classList
+    .add("gizli");
+
+  document
+    .getElementById(yeni)
+    .classList
+    .remove("gizli");
 }
 
+/* EMOJİ YAĞMURU */
+
 function emojiYagdir() {
-  const emojiler = ["❤️", "💕", "🎉", "🎊", "🥳", "😊", "✨"];
+
+  const emojiler = [
+    "❤️",
+    "💕",
+    "🎉",
+    "🎊",
+    "🥳",
+    "😊",
+    "✨",
+    "🎈"
+  ];
 
   for (let i = 0; i < 8; i++) {
-    const emoji = document.createElement("div");
-    emoji.className = "emoji";
-    emoji.innerHTML = emojiler[Math.floor(Math.random() * emojiler.length)];
 
-    const solMu = Math.random() > 0.5;
+    const emoji =
+      document.createElement("div");
+
+    emoji.className = "emoji";
+
+    emoji.innerHTML =
+      emojiler[
+        Math.floor(
+          Math.random() *
+          emojiler.length
+        )
+      ];
+
+    const solMu =
+      Math.random() > 0.5;
+
+    /* FOTOĞRAFLARIN ÜZERİNE DEĞİL
+       SAĞ VE SOL BOŞLUKLARA */
 
     if (window.innerWidth > 700) {
-      emoji.style.left = solMu
-        ? Math.random() * 18 + "vw"
-        : Math.random() * 18 + 82 + "vw";
+
+      emoji.style.left =
+        solMu
+          ? Math.random() * 18 + "vw"
+          : Math.random() * 18 + 82 + "vw";
+
     } else {
-      emoji.style.left = solMu
-        ? Math.random() * 7 + "vw"
-        : Math.random() * 7 + 93 + "vw";
+
+      emoji.style.left =
+        solMu
+          ? Math.random() * 7 + "vw"
+          : Math.random() * 7 + 93 + "vw";
     }
 
-    emoji.style.fontSize = Math.random() * 22 + 18 + "px";
-    emoji.style.animationDuration = Math.random() * 2 + 4 + "s";
+    emoji.style.fontSize =
+      Math.random() * 22 + 18 + "px";
 
-    document.getElementById("emojiAlani").appendChild(emoji);
+    emoji.style.animationDuration =
+      Math.random() * 2 + 4 + "s";
 
-    setTimeout(() => emoji.remove(), 6500);
+    document
+      .getElementById("emojiAlani")
+      .appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+    }, 6500);
   }
 }
