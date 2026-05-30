@@ -296,3 +296,126 @@ button {
   height: 38px;
   padding: 0;
 }
+@media (max-width: 700px) {
+
+  .ekran {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  button {
+    font-size: 17px;
+    padding: 15px 28px;
+  }
+
+  .video-sahne video,
+  #patlamaVideo {
+    width: 100%;
+    max-height: 72vh;
+    border-radius: 14px;
+  }
+
+  .video-ustu-soru {
+    width: 92%;
+    bottom: 18px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .video-ustu-soru h1 {
+    font-size: 21px;
+  }
+
+  .kaciyor-ekrani {
+    padding: 18px;
+    justify-content: center;
+  }
+
+  .kaciyor-ekrani h1 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+
+  .yakalabtn {
+    font-size: 16px;
+    padding: 13px 24px;
+  }
+
+  .busted-yazi {
+    font-size: 48px;
+    letter-spacing: 4px;
+  }
+
+  .busted-img {
+    max-height: 68vh;
+  }
+
+  .ana-gorsel {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .dogum-gunu {
+    background: linear-gradient(
+      90deg,
+      #f6b8c8 0%,
+      #f6b8c8 7%,
+      white 7%,
+      white 93%,
+      #f6b8c8 93%,
+      #f6b8c8 100%
+    );
+  }
+
+  .beyaz-serit {
+    width: 86%;
+    padding: 28px 12px 60px;
+  }
+
+  .beyaz-serit h1 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .foto-akis {
+    gap: 24px;
+  }
+
+  .foto-akis img {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .emoji {
+    font-size: 17px !important;
+  }
+
+  .mektup {
+    width: 94%;
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .mektup h2 {
+    font-size: 25px;
+  }
+
+  .mektup p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .mektup h3 {
+    font-size: 22px;
+  }
+}
